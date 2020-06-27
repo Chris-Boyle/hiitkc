@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactPlayer from 'react-player';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import Date from '../../components/date';
@@ -32,6 +34,14 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
+        {postData.url && (
+          <ReactPlayer
+            url={postData.url}
+            className='react-player'
+            width='100%'
+            height='50rem'
+          />
+        )}
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
