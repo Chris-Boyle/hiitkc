@@ -39,7 +39,7 @@ export default function Post({ postData }) {
             url={postData.url}
             className='react-player'
             width='100%'
-            height='50rem'
+            height='30rem'
           />
         )}
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
