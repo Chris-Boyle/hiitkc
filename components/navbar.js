@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +37,7 @@ export default function NavBar() {
     setAnchorEl(null);
   };
 
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <div className={classes.root}>
@@ -63,8 +63,9 @@ export default function NavBar() {
             onClose={handleClose}
             TransitionComponent={Fade}
           >
-            <MenuItem onClick={() => router.push('/')}>
-              Home
+            <MenuItem onClick={() => router.push('/')}>Home</MenuItem>
+            <MenuItem onClick={() => router.push('/workouts')}>
+              Workouts
             </MenuItem>
           </Menu>
           <Typography variant='h6' className={classes.title}>

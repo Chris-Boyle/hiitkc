@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import ReactPlayer from 'react-player';
 import Layout, { siteTitle } from '../components/layout';
 import Date from '../components/date';
 import utilStyles from '../styles/utils.module.css';
@@ -15,21 +14,13 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Workouts({ allPostsData }) {
   return (
     <>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <section className={utilStyles.headingMd}>
-          <p>
-            Hi, I'm Chris. Working out and staying healthy has been a hobby of
-            mine for a while now.
-          </p>
-          <p>Follow my wife and I as we kick our booties into shape.</p>
-          <img src='../images/superman.jpg' alt='superman' />
-        </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Workouts</h2>
           <ul className={utilStyles.list}>
@@ -43,15 +34,8 @@ export default function Home({ allPostsData }) {
                   <Date dateString={date} />
                 </small>
               </li>
-            ))} 
+            ))}
           </ul>
-          <h2 className={utilStyles.headingLg}>Throw back to a while ago!</h2>
-          <ReactPlayer
-            url='https://youtu.be/XqUrdSPLD5M'
-            className='react-player'
-            width='100%'
-            height='30rem'
-          />
         </section>
       </Layout>
     </>
