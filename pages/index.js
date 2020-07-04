@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
 import Layout, { siteTitle } from '../components/layout';
 import Date from '../components/date';
 import utilStyles from '../styles/utils.module.css';
@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
                   <Date dateString={date} />
                 </small>
               </li>
-            ))} 
+            ))}
           </ul>
           <h2 className={utilStyles.headingLg}>Throw back to a while ago!</h2>
           <ReactPlayer
@@ -51,6 +51,7 @@ export default function Home({ allPostsData }) {
             className='react-player'
             width='100%'
             height='30rem'
+            controls
           />
         </section>
       </Layout>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import Date from '../../components/date';
@@ -40,6 +40,7 @@ export default function Post({ postData }) {
             className='react-player'
             width='100%'
             height='30rem'
+            controls
           />
         )}
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
