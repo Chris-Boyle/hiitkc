@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+This is the nextjs app for [Hiit KC](https://hiitkc.com).
