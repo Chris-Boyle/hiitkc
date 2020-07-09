@@ -41,6 +41,7 @@ export default function Post({ postData }) {
             width='100%'
             height='30rem'
             controls
+            style={{ backgroundColor: 'black' }}
           />
         )}
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

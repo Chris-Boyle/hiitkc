@@ -24,10 +24,9 @@ export default function Home({ allPostsData }) {
         </Head>
         <section className={utilStyles.headingMd}>
           <p>
-            Hi, I'm Chris. Working out and staying healthy has been a hobby of
-            mine for a while now.
+            Hi, we are Chris and Meagan. Working out and staying healthy has
+            been a hobby of ours for a while now. Join us on our journey!
           </p>
-          <p>Follow my wife and I as we kick our booties into shape.</p>
           <img src='../images/superman.jpg' alt='superman' />
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
