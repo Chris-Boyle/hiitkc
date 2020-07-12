@@ -71,7 +71,9 @@ export default function NavBar() {
           <Typography variant='h6' className={classes.title}>
             HIIT KC
           </Typography>
-          <Button color='inherit'>Contact Us</Button>
+          <Button color='inherit' onClick={() => router.push('/contact')}>
+            Contact Us
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
